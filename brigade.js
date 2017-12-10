@@ -12,7 +12,7 @@ events.on("pull_request", (event,project) => {
         reporter.env = {
                 GH_REPO: project.repo.name,
                 GH_STATE: "success",
-                GH_DESCRIPTION: "brigade says YES!",
+                GH_DESCRIPTION: "build successful",
                 GH_CONTEXT: "brigade",
                 GH_TOKEN: project.secrets.githubToken, // YOU MUST SET THIS IN YOUR PROJECT
                 GH_COMMIT: event.commit

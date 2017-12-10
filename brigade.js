@@ -1,6 +1,5 @@
 const { events, Job, Group } = require("brigadier")
 
-
 events.on("pull_request", (event,project) => {
         console.log("Handling a pull request for :" + event.commit)
         var testJob = new Job("test", "java")

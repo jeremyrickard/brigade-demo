@@ -21,6 +21,8 @@ events.on("pull_request", (event,project) => {
 
         testJob.run().then(results => {
 		reporter.run()
-        })
+        }, error => {
+	        console.log("Error running test job")
+	})
 })
 

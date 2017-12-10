@@ -21,7 +21,7 @@ events.on("pull_request", (event,project) => {
 
         testJob.run().then(results => {
 		reporter.run()
-        }).catch(error => {
+        }, error => {
 		reporter.env = {
                		GH_REPO: project.repo.name,
                 	GH_STATE: "failure",
@@ -30,10 +30,7 @@ events.on("pull_request", (event,project) => {
                 	GH_TOKEN: project.secrets.githubToken, // YOU MUST SET THIS IN YOUR PROJECT
                 	GH_COMMIT: event.commit
         	}
-		reporter.run().then( () => {
-			throw error
-		})
+		reporter.run()
         })
-
 })
 

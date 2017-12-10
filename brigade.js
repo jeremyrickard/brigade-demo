@@ -21,16 +21,6 @@ events.on("pull_request", (event,project) => {
 
         testJob.run().then(results => {
 		reporter.run()
-        }, error => {
-		reporter.env = {
-               		GH_REPO: project.repo.name,
-                	GH_STATE: "failure",
-                	GH_DESCRIPTION: "build failed",
-                	GH_CONTEXT: "brigade",
-                	GH_TOKEN: project.secrets.githubToken, // YOU MUST SET THIS IN YOUR PROJECT
-                	GH_COMMIT: event.commit
-        	}
-		reporter.run()
         })
 })
 

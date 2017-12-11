@@ -12,8 +12,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class BrigadeDemoApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	public void testBadTest() {
 	    assertTrue(false);
+
+	@Test
+	public void contextLoads() {
 	}
 
 }

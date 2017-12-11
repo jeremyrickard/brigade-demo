@@ -27,7 +27,7 @@ events.on("pull_request", (event,project) => {
 		reporter(project, event.commit, "success", "build successful").run()
         }, error => {
 		reporter(project, event.commit, "failure", "build failed").run().then(
-			() -> {  throw 'Build Failed' })
+			() => {  throw 'Build Failed' })
 	})
 })
 

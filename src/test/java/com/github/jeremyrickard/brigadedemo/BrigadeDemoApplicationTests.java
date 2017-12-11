@@ -12,6 +12,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class BrigadeDemoApplicationTests {
 
 	@Test
+	public void testGoodTest() {
+	    assertTrue(true);
+	}	
+
+	@Test
 	public void testBadTest() {
 	    assertTrue(false);
 

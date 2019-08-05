@@ -1,6 +1,7 @@
 package com.github.jeremyrickard.brigadedemo;
 
 import org.junit.Test;
+import static org.junit.Assert.*;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -11,6 +12,7 @@ public class BrigadeDemoApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		assertTrue(false)
 	}
 
 }
